@@ -1,9 +1,8 @@
-﻿// ReSharper disable once CheckNamespace
-namespace Serilog;
-
-using Autodesk.Revit.ApplicationServices;
+﻿using Autodesk.Revit.ApplicationServices;
 
 using System.Globalization;
+
+namespace Serilog;
 
 internal static class LanguageExtensions {
     public static CultureInfo GetCultureInfo(this LanguageType languageType) {

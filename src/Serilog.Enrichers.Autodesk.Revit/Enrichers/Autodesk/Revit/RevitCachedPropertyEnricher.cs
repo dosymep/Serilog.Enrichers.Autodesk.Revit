@@ -1,7 +1,6 @@
 ﻿using Serilog.Core;
 using Serilog.Events;
 
-// ReSharper disable once CheckNamespace
 namespace Serilog.Enrichers.Autodesk.Revit; 
 
 internal class RevitCachedPropertyEnricher<T> : ILogEventEnricher {
