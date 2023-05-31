@@ -1,0 +1,62 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net45</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <LangVersion>11</LangVersion>
+        <Configurations>Release;Debug</Configurations>
+        <Platforms>x64</Platforms>
+        <PackageIcon>autodesk-revit.png</PackageIcon>
+        <Authors>dosymep</Authors>
+        <Copyright>Copyright (c) 2023 Biseuv Olzhas (dosymep)</Copyright>
+        <PackageProjectUrl>https://github.com/dosymep/Serilog.Enrichers.Autodesk.Revit</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/dosymep/Serilog.Enrichers.Autodesk.Revit.git</RepositoryUrl>
+        <RepositoryType>Git</RepositoryType>
+        <PackageTags>git, serilog, enrich, autodesk, revit, dosymep</PackageTags>
+        <Title>$(AssemblyName)</Title>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+        <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+        <IncludeSymbols>True</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <DocumentationFile>bin\x64\$(ConfigurationName)\$(AssemblyName).xml</DocumentationFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Using Remove="System.Net.Http" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
+            <_Parameter1>$(AssemblyName).Tests</_Parameter1>
+        </AssemblyAttribute>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Serilog" Version="2.10.0" />
+        <PackageReference Include="Autodesk.Revit.SDK" Version="2017.0.0">
+            <PrivateAssets>all</PrivateAssets>
+            <ExcludeAssets>runtime</ExcludeAssets>
+        </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="..\..\assets\autodesk-revit.png">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+            <Link>assets\autodesk-revit.png</Link>
+        </None>
+        <None Include="..\..\LICENSE.md">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+            <Link>assets\LICENSE.md</Link>
+        </None>
+        <None Include="..\..\README.md">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+            <Link>assets\README.md</Link>
+        </None>
+    </ItemGroup>
+</Project>
