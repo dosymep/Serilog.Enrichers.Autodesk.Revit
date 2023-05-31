@@ -1,6 +1,6 @@
 # Serilog.Enrichers.Autodesk.Revit
 
-The Autodesk Revit enrichers for Serilog.
+The Autodesk Revit enrichers for [Serilog](https://serilog.net).
 
 ### Getting started
 
