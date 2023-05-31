@@ -29,6 +29,21 @@ public static class AutodeskRevitLoggerConfigurationExtensions {
     /// Default revit language property name.
     /// </summary>
     public const string RevitLanguagePropertyName = "RevitLanguage";
+    
+    /// <summary>
+    /// Default revit document title property name.
+    /// </summary>
+    public const string RevitDocumentTitlePropertyName = "RevitDocumentTitle";
+    
+    /// <summary>
+    /// Default revit document path name property name.
+    /// </summary>
+    public const string RevitDocumentPathNamePropertyName = "RevitDocumentPathName";
+    
+    /// <summary>
+    /// Default revit document model path property name.
+    /// </summary>
+    public const string RevitDocumentModelPathPropertyName = "RevitDocumentModelPath";
 
     /// <summary>
     /// Enrich log events with a <a href="https://www.revitapidocs.com/2017.1/320391bf-2c21-98ca-192c-da1d9becff11.htm">VersionNumber</a> property.

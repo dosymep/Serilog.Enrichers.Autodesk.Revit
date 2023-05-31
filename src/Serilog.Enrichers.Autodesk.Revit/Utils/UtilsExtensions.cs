@@ -2,6 +2,8 @@
 
 using System.Globalization;
 
+using Autodesk.Revit.DB;
+
 namespace Serilog.Utils;
 
 internal static class UtilsExtensions {
@@ -42,5 +44,17 @@ internal static class UtilsExtensions {
             default:
                 return CultureInfo.CurrentCulture;
         }
+    }
+
+    public static bool IsCloudModel(this Document document) {
+        return (bool?) typeof(Document).GetProperty("IsModelInCloud")?.GetValue(document) == true;
+    }
+
+    public static ModelPath? GetCloudModelPath(this Document document) {
+        return (ModelPath?) typeof(Document).GetProperty("GetCloudModelPath")?.GetValue(document);
+    }
+
+    public static string? ConvertModelPathString(this ModelPath? modelPath) {
+        return modelPath == null ? null : ModelPathUtils.ConvertModelPathToUserVisiblePath(modelPath);
     }
 }
