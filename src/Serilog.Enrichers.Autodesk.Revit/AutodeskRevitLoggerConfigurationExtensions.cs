@@ -31,6 +31,11 @@ public static class AutodeskRevitLoggerConfigurationExtensions {
     public const string RevitLanguagePropertyName = "RevitLanguage";
     
     /// <summary>
+    /// Default revit addin property name.
+    /// </summary>
+    public const string RevitAddinPropertyName = "RevitAddin";
+    
+    /// <summary>
     /// Default revit document title property name.
     /// </summary>
     public const string RevitDocumentTitlePropertyName = "RevitDocumentTitle";
