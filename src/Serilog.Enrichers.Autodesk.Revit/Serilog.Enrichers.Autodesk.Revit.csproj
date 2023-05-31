@@ -14,6 +14,7 @@
         <PackageProjectUrl>https://github.com/dosymep/Serilog.Enrichers.Autodesk.Revit</PackageProjectUrl>
         <RepositoryUrl>https://github.com/dosymep/Serilog.Enrichers.Autodesk.Revit.git</RepositoryUrl>
         <RepositoryType>Git</RepositoryType>
+        <Description>The Autodesk Revit enrichers for Serilog</Description>
         <PackageTags>git, serilog, enrich, autodesk, revit, dosymep</PackageTags>
         <Title>$(AssemblyName)</Title>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
