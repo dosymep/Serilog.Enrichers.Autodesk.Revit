@@ -2,9 +2,9 @@
 
 using System.Globalization;
 
-namespace Serilog;
+namespace Serilog.Utils;
 
-internal static class LanguageExtensions {
+internal static class UtilsExtensions {
     public static CultureInfo GetCultureInfo(this LanguageType languageType) {
         switch((int) languageType) {
             case 0: // LanguageType.English_USA

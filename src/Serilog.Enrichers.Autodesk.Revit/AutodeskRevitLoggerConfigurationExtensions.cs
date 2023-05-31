@@ -2,6 +2,7 @@
 
 using Serilog.Configuration;
 using Serilog.Enrichers.Autodesk.Revit;
+using Serilog.Utils;
 
 namespace Serilog;
 
