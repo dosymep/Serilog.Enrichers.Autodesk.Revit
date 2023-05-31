@@ -31,7 +31,7 @@ public static class AutodeskRevitLoggerConfigurationExtensions {
     public const string RevitLanguagePropertyName = "RevitLanguage";
 
     /// <summary>
-    /// Enrich log events with a <a href="https://www.revitapidocs.com/2022/320391bf-2c21-98ca-192c-da1d9becff11.htm">VersionNumber</a> property.
+    /// Enrich log events with a <a href="https://www.revitapidocs.com/2017.1/320391bf-2c21-98ca-192c-da1d9becff11.htm">VersionNumber</a> property.
     /// </summary>
     /// <param name="loggerEnrichmentConfiguration">Logger enrichment configuration.</param>
     /// <param name="uiApplication">Revit UIApplication.</param>
@@ -45,7 +45,7 @@ public static class AutodeskRevitLoggerConfigurationExtensions {
     }
 
     /// <summary>
-    /// Enrich log events with a <a href="https://www.revitapidocs.com/2022/35b18b73-4c47-fee3-d2f9-21298f029f7f.htm">VersionNumber</a> property.
+    /// Enrich log events with a <a href="https://www.revitapidocs.com/2017.1/35b18b73-4c47-fee3-d2f9-21298f029f7f.htm">VersionNumber</a> property.
     /// </summary>
     /// <param name="loggerEnrichmentConfiguration">Logger enrichment configuration.</param>
     /// <param name="uiControlledApplication">Revit UIControlledApplication.</param>
@@ -59,7 +59,7 @@ public static class AutodeskRevitLoggerConfigurationExtensions {
     }
 
     /// <summary>
-    /// Enrich log events with a <a href="https://www.revitapidocs.com/2022/04ef312a-e25a-cbcd-40c4-43fe6311e677.htm">VersionBuild</a> property.
+    /// Enrich log events with a <a href="https://www.revitapidocs.com/2017.1/04ef312a-e25a-cbcd-40c4-43fe6311e677.htm">VersionBuild</a> property.
     /// </summary>
     /// <param name="loggerEnrichmentConfiguration">Logger enrichment configuration.</param>
     /// <param name="uiApplication">Revit UIApplication.</param>
@@ -73,7 +73,7 @@ public static class AutodeskRevitLoggerConfigurationExtensions {
     }
 
     /// <summary>
-    /// Enrich log events with a <a href="https://www.revitapidocs.com/2022/c5963cab-c85b-561b-1ea2-b9d11b58050c.htm">VersionBuild</a> property.
+    /// Enrich log events with a <a href="https://www.revitapidocs.com/2017.1/c5963cab-c85b-561b-1ea2-b9d11b58050c.htm">VersionBuild</a> property.
     /// </summary>
     /// <param name="loggerEnrichmentConfiguration">Logger enrichment configuration.</param>
     /// <param name="uiControlledApplication">Revit UIControlledApplication.</param>
@@ -87,7 +87,7 @@ public static class AutodeskRevitLoggerConfigurationExtensions {
     }
     
     /// <summary>
-    /// Enrich log events with a <a href="https://www.revitapidocs.com/2022/2a7c8664-de0d-7a43-e670-2e733e579609.htm">Username</a> property.
+    /// Enrich log events with a <a href="https://www.revitapidocs.com/2017.1/2a7c8664-de0d-7a43-e670-2e733e579609.htm">Username</a> property.
     /// </summary>
     /// <param name="loggerEnrichmentConfiguration">Logger enrichment configuration.</param>
     /// <param name="uiApplication">Revit UIApplication.</param>
@@ -101,7 +101,7 @@ public static class AutodeskRevitLoggerConfigurationExtensions {
     }
     
     /// <summary>
-    /// Enrich log events with a <a href="https://www.revitapidocs.com/2022/2b1d8b80-a11c-2a57-63bd-6c0d67691879.htm">Language</a> property.
+    /// Enrich log events with a <a href="https://www.revitapidocs.com/2017.1/2b1d8b80-a11c-2a57-63bd-6c0d67691879.htm">Language</a> property.
     /// </summary>
     /// <param name="loggerEnrichmentConfiguration">Logger enrichment configuration.</param>
     /// <param name="uiApplication">Revit UIApplication.</param>
