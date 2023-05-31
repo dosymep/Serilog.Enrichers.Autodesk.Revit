@@ -24,6 +24,11 @@ public static class AutodeskRevitLoggerConfigurationExtensions {
     /// Default revit username property name.
     /// </summary>
     public const string RevitUserNamePropertyName = "RevitUserName";
+    
+    /// <summary>
+    /// Default revit language property name.
+    /// </summary>
+    public const string RevitLanguagePropertyName = "RevitLanguage";
 
     /// <summary>
     /// Enrich log events with a <a href="https://www.revitapidocs.com/2022/320391bf-2c21-98ca-192c-da1d9becff11.htm">VersionNumber</a> property.
@@ -93,6 +98,20 @@ public static class AutodeskRevitLoggerConfigurationExtensions {
         string revitUserNamePropertyName = RevitUserNamePropertyName) {
         return loggerEnrichmentConfiguration.WithRevitProperty(revitUserNamePropertyName,
             uiApplication.Application.Username);
+    }
+    
+    /// <summary>
+    /// Enrich log events with a <a href="https://www.revitapidocs.com/2022/2b1d8b80-a11c-2a57-63bd-6c0d67691879.htm">Language</a> property.
+    /// </summary>
+    /// <param name="loggerEnrichmentConfiguration">Logger enrichment configuration.</param>
+    /// <param name="uiApplication">Revit UIApplication.</param>
+    /// <param name="revitLanguagePropertyName">Revit language property name. Default is <see cref="RevitLanguagePropertyName"/>.</param>
+    /// <returns>Configuration object allowing method chaining.</returns>
+    public static LoggerConfiguration WithRevitLanguage(this LoggerEnrichmentConfiguration loggerEnrichmentConfiguration,
+        UIApplication uiApplication,
+        string revitLanguagePropertyName = RevitLanguagePropertyName) {
+        return loggerEnrichmentConfiguration.WithRevitProperty(revitLanguagePropertyName,
+            uiApplication.Application.Language.GetCultureInfo().EnglishName);
     }
 
     internal static LoggerConfiguration WithRevitProperty<T>(
