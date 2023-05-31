@@ -19,6 +19,11 @@ public static class AutodeskRevitLoggerConfigurationExtensions {
     /// Default revit build property name.
     /// </summary>
     public const string RevitBuildPropertyName = "RevitBuild";
+    
+    /// <summary>
+    /// Default revit username property name.
+    /// </summary>
+    public const string RevitUserNamePropertyName = "RevitUserName";
 
     /// <summary>
     /// Enrich log events with a <a href="https://www.revitapidocs.com/2022/320391bf-2c21-98ca-192c-da1d9becff11.htm">VersionNumber</a> property.
@@ -74,6 +79,20 @@ public static class AutodeskRevitLoggerConfigurationExtensions {
         string revitBuildPropertyName = RevitBuildPropertyName) {
         return loggerEnrichmentConfiguration.WithRevitProperty(revitBuildPropertyName,
             uiControlledApplication.ControlledApplication.VersionBuild);
+    }
+    
+    /// <summary>
+    /// Enrich log events with a <a href="https://www.revitapidocs.com/2022/2a7c8664-de0d-7a43-e670-2e733e579609.htm">Username</a> property.
+    /// </summary>
+    /// <param name="loggerEnrichmentConfiguration">Logger enrichment configuration.</param>
+    /// <param name="uiApplication">Revit UIApplication.</param>
+    /// <param name="revitUserNamePropertyName">Revit username property name. Default is <see cref="RevitUserNamePropertyName"/>.</param>
+    /// <returns>Configuration object allowing method chaining.</returns>
+    public static LoggerConfiguration WithRevitUserName(this LoggerEnrichmentConfiguration loggerEnrichmentConfiguration,
+        UIApplication uiApplication,
+        string revitUserNamePropertyName = RevitUserNamePropertyName) {
+        return loggerEnrichmentConfiguration.WithRevitProperty(revitUserNamePropertyName,
+            uiApplication.Application.Username);
     }
 
     internal static LoggerConfiguration WithRevitProperty<T>(
