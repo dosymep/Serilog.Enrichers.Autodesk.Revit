@@ -15,17 +15,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serilog.Enrichers.Autodesk.
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Debug|x64 = Debug|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{61752A6F-6BA7-4536-9B2A-482771608632}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{61752A6F-6BA7-4536-9B2A-482771608632}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{61752A6F-6BA7-4536-9B2A-482771608632}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{61752A6F-6BA7-4536-9B2A-482771608632}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B96FBB4D-121D-421B-897E-DC9E0484ED0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B96FBB4D-121D-421B-897E-DC9E0484ED0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B96FBB4D-121D-421B-897E-DC9E0484ED0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B96FBB4D-121D-421B-897E-DC9E0484ED0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61752A6F-6BA7-4536-9B2A-482771608632}.Release|x64.ActiveCfg = Release|x64
+		{61752A6F-6BA7-4536-9B2A-482771608632}.Release|x64.Build.0 = Release|x64
+		{61752A6F-6BA7-4536-9B2A-482771608632}.Debug|x64.ActiveCfg = Debug|x64
+		{61752A6F-6BA7-4536-9B2A-482771608632}.Debug|x64.Build.0 = Debug|x64
+		{B96FBB4D-121D-421B-897E-DC9E0484ED0C}.Release|x64.ActiveCfg = Release|x64
+		{B96FBB4D-121D-421B-897E-DC9E0484ED0C}.Release|x64.Build.0 = Release|x64
+		{B96FBB4D-121D-421B-897E-DC9E0484ED0C}.Debug|x64.ActiveCfg = Debug|x64
+		{B96FBB4D-121D-421B-897E-DC9E0484ED0C}.Debug|x64.Build.0 = Debug|x64
 	EndGlobalSection
 EndGlobal
