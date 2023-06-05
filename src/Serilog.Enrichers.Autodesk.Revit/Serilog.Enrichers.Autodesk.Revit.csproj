@@ -23,7 +23,7 @@
         <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
         <IncludeSymbols>True</IncludeSymbols>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-        <DocumentationFile>bin\x64\$(ConfigurationName)\$(AssemblyName).xml</DocumentationFile>
+        <GenerateDocumentationFile>True</GenerateDocumentationFile>
     </PropertyGroup>
 
     <ItemGroup>
