@@ -11,7 +11,7 @@
         <Platforms>x64</Platforms>
         <PackageIcon>autodesk-revit.png</PackageIcon>
         <Authors>dosymep</Authors>
-        <Copyright>Copyright (c) 2023 Biseuv Olzhas (dosymep)</Copyright>
+        <Copyright>Copyright (c) 2024 Biseuv Olzhas (dosymep)</Copyright>
         <PackageProjectUrl>https://github.com/dosymep/Serilog.Enrichers.Autodesk.Revit</PackageProjectUrl>
         <RepositoryUrl>https://github.com/dosymep/Serilog.Enrichers.Autodesk.Revit.git</RepositoryUrl>
         <RepositoryType>Git</RepositoryType>
@@ -71,5 +71,7 @@
             <PackagePath>\</PackagePath>
             <Link>assets\README.md</Link>
         </None>
+        
+        <Content Include="../../.github/workflows/*.yml" Link="ci/%(FileName)$(FileExt)" />
     </ItemGroup>
 </Project>

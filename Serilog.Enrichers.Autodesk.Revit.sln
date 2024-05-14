@@ -1,17 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serilog.Enrichers.Autodesk.Revit", "Serilog.Enrichers.Autodesk.Revit\Serilog.Enrichers.Autodesk.Revit.csproj", "{61752A6F-6BA7-4536-9B2A-482771608632}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serilog.Enrichers.Autodesk.Revit", "src/Serilog.Enrichers.Autodesk.Revit\Serilog.Enrichers.Autodesk.Revit.csproj", "{61752A6F-6BA7-4536-9B2A-482771608632}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CF804FA7-56A6-4FA0-B201-118E593BD4CD}"
 	ProjectSection(SolutionItems) = preProject
-		..\.editorconfig = ..\.editorconfig
-		..\CONTRIBUTING.md = ..\CONTRIBUTING.md
-		..\CREDITS.md = ..\CREDITS.md
-		..\LICENSE.md = ..\LICENSE.md
-		..\README.md = ..\README.md
+		.editorconfig = .editorconfig
+		CONTRIBUTING.md = CONTRIBUTING.md
+		CREDITS.md = CREDITS.md
+		LICENSE.md = LICENSE.md
+		README.md = README.md
+		CHANGELOG.md = CHANGELOG.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serilog.Enrichers.Autodesk.Revit.Tests", "Serilog.Enrichers.Autodesk.Revit.Tests\Serilog.Enrichers.Autodesk.Revit.Tests.csproj", "{B96FBB4D-121D-421B-897E-DC9E0484ED0C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serilog.Enrichers.Autodesk.Revit.Tests", "src/Serilog.Enrichers.Autodesk.Revit.Tests\Serilog.Enrichers.Autodesk.Revit.Tests.csproj", "{B96FBB4D-121D-421B-897E-DC9E0484ED0C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

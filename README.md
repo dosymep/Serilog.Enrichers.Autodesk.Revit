@@ -1,5 +1,11 @@
 # Serilog.Enrichers.Autodesk.Revit
 
+[![JetBrains Rider](https://img.shields.io/badge/JetBrains-Rider-blue.svg)](https://www.jetbrains.com/rider)
+[![License MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE.md)
+[![Revit 2017-2025](https://img.shields.io/badge/Revit-2017--2025-blue.svg)](https://www.autodesk.com/products/revit/overview)
+[![main](https://github.com/dosymep/Serilog.Enrichers.Autodesk.Revit/actions/workflows/main.yml/badge.svg)](https://github.com/dosymep/Serilog.Enrichers.Autodesk.Revit/actions/workflows/main.yml)
+
+
 The Autodesk Revit enrichers for [Serilog](https://serilog.net).
 
 ### Getting started
