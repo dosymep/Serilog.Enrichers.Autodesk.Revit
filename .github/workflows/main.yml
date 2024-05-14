@@ -1,0 +1,96 @@
+name: main
+
+permissions:
+  packages: write
+  contents: write
+  actions: read
+  checks: write
+
+on:
+  # on pull_request to master
+  pull_request:
+    types: [ opened, synchronize ]
+    branches: [ main, master ]
+  
+  # manual
+  workflow_dispatch:
+
+env:
+  output: bin
+  project: Serilog.Enrichers.Autodesk.Revit
+  configuration: Release
+  default_branch: ${{ github.event.repository.default_branch }}
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      # Install the .NET Core workload
+      - name: Install .NET 8.0
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      
+      # Build project: https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-build
+      - name: Build
+        run: dotnet build -c ${{ env.configuration }}
+        
+      # Test project: https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-test
+      - name: Test
+        run: dotnet test -c ${{ env.configuration }} --logger trx --results-directory "TestResults"
+
+      # Upload tests results: https://github.com/dorny/test-reporter
+      - name: Upload tests results
+        uses: dorny/test-reporter@v1
+        if: success() || failure()
+        with:
+          name: dotnet tests
+          path: ./TestResults/*.trx
+          reporter: dotnet-trx
+        
+      - name: Pack
+        run: dotnet pack -c ${{ env.configuration }} -o ${{ env.output }}
+      
+      # Fetch version: https://github.com/kzrnm/get-net-sdk-project-versions-action
+      - name: Fetch version
+        uses: kzrnm/get-net-sdk-project-versions-action@v2
+        id: get-version
+        with:
+          proj-path: src/${{ env.project }}/${{ env.project }}.csproj
+      
+      # Upload the nuget package: https://github.com/marketplace/actions/upload-a-build-artifact
+      - name: Upload
+        uses: actions/upload-artifact@v4
+        with:
+          name: nuget
+          path: |
+            ${{ env.output }}/*.nupkg
+            ${{ env.output }}/*.snupkg
+
+      # Publish the nuget package: https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-nuget-push
+      - name: Publish nuget
+        if: github.ref_name == env.default_branch
+        run: dotnet nuget push ${{ env.output }}/**/*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }} --skip-duplicate
+
+      # Publish the nuget package: https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-nuget-push
+      - name: Publish github
+        if: github.ref_name == env.default_branch
+        run: dotnet nuget push ${{ env.output }}/**/*.nupkg -s https://nuget.pkg.github.com/${{ github.REPOSITORY_OWNER }}/index.json -k ${{ github.TOKEN }} --skip-duplicate
+      
+      # Publish release: https://github.com/softprops/action-gh-release
+      - name: Publish Release
+        if: github.ref_name == env.default_branch
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ github.TOKEN }}
+        with:
+          tag_name: v${{ steps.get-version.outputs.package-version }}
+          name: v${{ steps.get-version.outputs.package-version }}
+          body: v${{ steps.get-version.outputs.package-version }}
+          draft: true
+          prerelease: false
+          files: |
+            ${{ env.output }}/*.nupkg
+            ${{ env.output }}/*.snupkg

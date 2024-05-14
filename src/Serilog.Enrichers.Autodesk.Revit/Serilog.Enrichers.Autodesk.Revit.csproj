@@ -71,5 +71,7 @@
             <PackagePath>\</PackagePath>
             <Link>assets\README.md</Link>
         </None>
+        
+        <Content Include="../../.github/workflows/*.yml" Link="ci/%(FileName)$(FileExt)" />
     </ItemGroup>
 </Project>
