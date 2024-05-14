@@ -16,7 +16,7 @@ public class RevitCachedPropertyTests {
 
         log.Information(@"Hello, world!");
 
-        Assert.NotNull(testSink.LogEvent);
+        Assert.That(testSink.LogEvent, Is.Not.Null);
         Assert.That(propertyValue, Is.EqualTo(GetScalarValue(testSink?.LogEvent, propertyName)));
     }
 
